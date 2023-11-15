@@ -4,7 +4,7 @@ package model;
  * class Card represents one of the 52 poker cards. There are
  * no comments before methods because the method name says it all.
  * 
- * @author Rick Mercer and YOUR NAME
+ * @author Rick Mercer and Ali Kaddoura
  */
 
 public class Card implements Comparable<Card> {
@@ -18,16 +18,18 @@ public class Card implements Comparable<Card> {
   }
 
   public Suit getSuit() {
-    return null;
+    return this.suit;
   }
 
   public Rank getRank() {
-    return null;
+    return this.rank;
   }
-
+  
   public int getValue() {
-    return Integer.MAX_VALUE;
+    return rank.getValue();
   }
+  
+  
 
   public String toString() {
     // Use these four Unicode icons for the solid suit icons. 
@@ -38,14 +40,27 @@ public class Card implements Comparable<Card> {
       suitIcon = '\u2665';
     if (suit == Suit.SPADES)
       suitIcon = '\u2660';
+    
+   
+    String valueToString = Integer.toString(getValue());
 
     // Need to get the value instead of "?"
-    return "?" + suitIcon;
+    return valueToString + suitIcon;
   }
 
   @Override
   public int compareTo(Card other) {
-    return Integer.MAX_VALUE;
+	  String cardOne = toString();
+	  String cardTwo = other.toString();
+	  
+	  return cardOne.compareTo(cardTwo);
+  }
+  
+  public Boolean equals(Card other) {
+	  
+	  int cardOne = getValue();
+	  int cardTwo = other.getValue();
+	  return cardOne == cardTwo; 
   }
 
 }

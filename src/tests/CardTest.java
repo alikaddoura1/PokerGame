@@ -3,8 +3,11 @@ package tests;
 /** 
  * Start of a JUnit test for class Card with enums.
  * 
- * @author Rick Mercer and YOUR NAME
+ * 
+ *
+ * @author Rick Mercer and Ali Kaddoura
  */
+
 import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
@@ -33,7 +36,7 @@ public class CardTest {
   }
   
   @Test
-  public void testToString() {
+  public void testToString() { 
     Card c2 = new Card(Rank.DEUCE, Suit.CLUBS);
     assertEquals("2" + '\u2663', c2.toString());
     Card c3 = new Card(Rank.THREE, Suit.DIAMONDS);
