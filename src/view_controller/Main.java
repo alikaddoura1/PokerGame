@@ -1,17 +1,19 @@
-package view_controller; 
+// Author: Ali Kaddoura
+package view_controller;
 
+import java.util.ArrayList;
 
 /**
- * This plays a console game of Arizona Hold-Em, 
- * a reduced version of Texas Hold-Em
+ * This plays a console game of Arizona Hold-Em, a reduced version of Texas
+ * Hold-Em
  * 
  * @author Rick Mercer
  */
 public class Main {
 
-  public static void main(String[] args) {
-  // Commented out since you might a different name for Game in Iteration 2
- //   Game game = new Game();
+	public static void main(String[] args) {
+		// Commented out since you might a different name for Game in Iteration 2
+		// Game game = new Game();
 //    game.start();   
-  }
+	}
 }

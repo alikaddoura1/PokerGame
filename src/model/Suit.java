@@ -1,5 +1,6 @@
+// Author: Ali Kaddoura
 package model;
+
 public enum Suit {
-  CLUBS, DIAMONDS, HEARTS, SPADES;
+	CLUBS, DIAMONDS, HEARTS, SPADES;
 }
-  
