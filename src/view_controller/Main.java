@@ -3,17 +3,20 @@ package view_controller;
 
 import java.util.ArrayList;
 
+import model.Game;
+
 /**
  * This plays a console game of Arizona Hold-Em, a reduced version of Texas
  * Hold-Em
  * 
- * @author Rick Mercer
+ * @author Rick Mercer & Ali Kaddoura
  */
 public class Main {
 
 	public static void main(String[] args) {
-		// Commented out since you might a different name for Game in Iteration 2
-		// Game game = new Game();
-//    game.start();   
+
+		Game game = new Game();
+		game.start();
 	}
+
 }

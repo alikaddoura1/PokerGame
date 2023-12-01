@@ -29,7 +29,7 @@ import model.Suit;
  */
 public class PokerHandTest {
 
-	// This file contains all 52 cards to save you time with names like
+	// This file contains all 52 cards to save you time with names like 
 	// C2 for the two of clubs
 	// AS for the ace of spades
 

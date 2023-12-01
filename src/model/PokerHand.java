@@ -11,12 +11,13 @@ import java.util.Collections;
 
 public class PokerHand implements Comparable<PokerHand> {
 	ArrayList<Card> cards;
-	private int handType;
+	public int handType;
 	private int highestCard;
 	private int lowCard;
 	private int onePair;
 	private int twoPair;
 	private int kicker;
+	public String typeWord;
 
 	private static final int ROYAL_FLUSH = 10;
 	private static final int STRAIGHT_FLUSH = 9;
@@ -58,7 +59,7 @@ public class PokerHand implements Comparable<PokerHand> {
 			cards.add(c3);
 
 		if (cards.contains(c4))
- 
+
 			throw new IllegalArgumentException();
 
 		else
@@ -270,24 +271,34 @@ public class PokerHand implements Comparable<PokerHand> {
 	public void checkHand() {
 		if (this.isRoyalFlush()) {
 			handType = ROYAL_FLUSH;
+			typeWord = "Royal Flush";
 		} else if (this.isStraightFlush()) {
 			handType = STRAIGHT_FLUSH;
+			typeWord = "Straight Flush";
 		} else if (this.isFourOfKind()) {
 			handType = FOUR_OF_A_KIND;
+			typeWord = "Four Of A Kind";
 		} else if (this.isFullHouse()) {
 			handType = FULL_HOUSE;
+			typeWord = "Full House";
 		} else if (this.isFlush()) {
 			handType = FLUSH;
+			typeWord = "Flush";
 		} else if (this.isStraight()) {
 			handType = STRAIGHT;
+			typeWord = "Straight";
 		} else if (this.isThreeOfKind()) {
 			handType = THREE_OF_A_KIND;
+			typeWord = "Three Of A Kind";
 		} else if (this.isTwoPair()) {
 			handType = TWO_PAIR;
+			typeWord = "Two Pair";
 		} else if (this.isPair()) {
 			handType = ONE_PAIR;
+			typeWord = "One Pair";
 		} else {
 			handType = HIGH_CARD;
+			typeWord = "High Card";
 		}
 
 	}
